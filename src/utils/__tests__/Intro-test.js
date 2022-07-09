@@ -1,7 +1,7 @@
 // __tests__/Intro-test.js
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Intro from '../src/utils/Intro';
+import Intro from '../Intro';
 import { FlatList, Text } from 'react-native';
 
 test('renders correctly', () => {

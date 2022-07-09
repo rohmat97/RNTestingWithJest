@@ -7,6 +7,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest -u",
+    "spec": "jest --testPathPattern helpers.spec.js --testPathIgnorePatterns node_modules",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -35,19 +36,27 @@
     "react-native-vector-icons": "^8.1.0",
     "react-redux": "^7.2.4",
     "redux": "^4.1.0",
+    "redux-mock-store": "^1.5.4",
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/runtime": "^7.8.4",
     "@react-native-community/eslint-config": "^1.1.0",
-    "babel-jest": "^25.1.0",
+    "babel-jest": "^25.5.1",
+    "babel-preset-react-native": "^4.0.1",
     "eslint": "^6.5.1",
     "jest": "^25.5.4",
+    "jest-react-native": "^18.0.0",
     "metro-react-native-babel-preset": "^0.59.0",
-    "react-test-renderer": "16.13.1"
+    "react-test-renderer": "^16.13.1"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "jest-react-native",
+    "collectCoverage": true,
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "spec"
+    ]
   }
 }
